@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@terminal-packages/sdk": "^1.0.18",
+    "@pokt-network/pocket-js": "^0.0.2",
+    "@terminal-packages/sdk": "^1.0.20",
+    "pocket-js-eth": "^0.0.4",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-scripts": "3.2.0",

@@ -1,53 +1,40 @@
 import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import {
+  TerminalHttpProvider,
+  EnvironmentTypes,
+  SourceType
+} from "@terminal-packages/sdk";
+const PocketProvider = require("pocket-js-web3-provider");
+const Web3 = require("web3");
 
 function App() {
-  const getBalanceMM = async () => {
-    window.web3.eth.getBalance(
-      "0xab7c74abC0C4d48d1bdad5DCB26153FC8780f83E",
-      (error, result) => {
-        console.log(error);
-        console.log(result.toString(10));
-      }
+  const pocketTester = async () => {
+    const provider = new PocketProvider("ETH", "4", "DEVUlxD8VwKzXEJJsBHHfEt", {
+      maxNodes: 3,
+      requestTimeOut: 20000,
+      sslOnly: false
+    });
+
+    const web3Instance = new Web3(
+      new TerminalHttpProvider({
+        apiKey: "QuLGEJxhbG4L1mMSElov7g==",
+        source: SourceType.Terminal,
+        customHttpProvider: provider,
+        projectId: "yNaYbqjdmwoQndwe",
+        environment: EnvironmentTypes.live
+      })
     );
-  };
-
-  const enableMM = async () => {
-    window.ethereum.enable((error, result) => {
-      console.log(error);
-      console.log(result);
-    });
-  };
-
-  const getAddress = async () => {
-    window.web3.eth.getAccounts((error, result) => {
-      console.log(error);
-      console.log(result);
-    });
-  };
-
-  const requestSignature = async () => {
-    window.web3.eth.getAccounts((error, result) => {
-      window.web3.eth.sign(
-        result[0],
-        ["SOME DATA TO SIGN"],
-        (error, result) => {
-          console.log(error);
-          console.log(result);
-        }
-      );
-    });
+    //const web3Instance = new Web3(provider);
+    web3Instance.eth
+      .getBalance("0xE22FD0840d127E44557D5E19A0A9a52EAfc3e297")
+      .then(console.log);
   };
 
   return (
     <div>
-      <button onClick={() => getBalanceMM()}>Test button getBalance</button>
-      <button onClick={() => enableMM()}>
-        Enable Metamask (hard refresh page after)
-      </button>
-      <button onClick={() => getAddress()}>Get Current Metamask Address</button>
-      <button onClick={() => requestSignature()}>request signature</button>
+      <button onClick={() => pocketTester()}>Test button getBalance</button>
     </div>
   );
 }
