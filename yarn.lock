@@ -1222,10 +1222,10 @@
   dependencies:
     defer-to-connect "^1.0.1"
 
-"@terminal-packages/sdk@^1.0.20":
-  version "1.0.20"
-  resolved "https://registry.yarnpkg.com/@terminal-packages/sdk/-/sdk-1.0.20.tgz#810bcef42fb5d4eb52f54922378eff83c4669d97"
-  integrity sha512-LUVbnJJqtMyYR7oiKWa7zyBhxEuisiF8YM7B7b/Llj2BSWsyJLcCDWLi1JifVUltx3hwkE1wyWXIt6d/R2DNYg==
+"@terminal-packages/sdk@^1.0.21":
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/@terminal-packages/sdk/-/sdk-1.0.21.tgz#990ea4189e6dfcfcdf2d08bde0250a069691991a"
+  integrity sha512-5uF0rFrrow9poF7jB1++WWjN8WWDZK/KdzQQbK5RcJHhkg8vLJIUDsD36YH390hExabwfnflPJRWTorMy9buMA==
   dependencies:
     cross-fetch "^3.0.4"
     web3-providers "^1.0.0-beta.55"
@@ -7985,7 +7985,7 @@ pocket-js-web3-provider@^0.0.2:
     axios "^0.18.1"
     pocket-js-core "^0.0.4"
 
-pocket-js-web3-provider@latest:
+pocket-js-web3-provider@^0.0.3, pocket-js-web3-provider@latest:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/pocket-js-web3-provider/-/pocket-js-web3-provider-0.0.3.tgz#7d6965462f4815bd9aaaaa3027a2fb19e35262ae"
   integrity sha512-aTzhuvpM/xNylzOfr5bLlTO+ARjza8Yplyo8x7MCyTbY1x42S7mt0ai8kcVnTxfZiV/yJyYURuzoygoXPY56xg==

@@ -1,11 +1,12 @@
 {
-  "name": "metamask-test",
+  "name": "pokt-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@pokt-network/pocket-js": "^0.0.2",
-    "@terminal-packages/sdk": "^1.0.20",
+    "@terminal-packages/sdk": "^1.0.21",
     "pocket-js-eth": "^0.0.4",
+    "pocket-js-web3-provider": "^0.0.3",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-scripts": "3.2.0",

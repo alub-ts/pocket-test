@@ -4,13 +4,14 @@ import "./App.css";
 import {
   TerminalHttpProvider,
   EnvironmentTypes,
-  SourceType
+  SourceType,
+  Web3Versions
 } from "@terminal-packages/sdk";
 const PocketProvider = require("pocket-js-web3-provider");
 const Web3 = require("web3");
 
 function App() {
-  const pocketTester = async () => {
+  const pocketTester = () => {
     const provider = new PocketProvider("ETH", "4", "DEVUlxD8VwKzXEJJsBHHfEt", {
       maxNodes: 3,
       requestTimeOut: 20000,
@@ -20,10 +21,11 @@ function App() {
     const web3Instance = new Web3(
       new TerminalHttpProvider({
         apiKey: "QuLGEJxhbG4L1mMSElov7g==",
-        source: SourceType.Terminal,
+        source: "POCKET",
         customHttpProvider: provider,
-        projectId: "yNaYbqjdmwoQndwe",
-        environment: EnvironmentTypes.live
+        projectId: "yNaYbqjdmwoQndwes",
+        environment: EnvironmentTypes.live,
+        web3Version: Web3Versions.one
       })
     );
     //const web3Instance = new Web3(provider);
